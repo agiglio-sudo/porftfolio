@@ -1,220 +1,363 @@
 
-/* ESTILOS GENERALES */
+/* =================================
+   ESTILO GENERAL
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
-    font-family: Georgia, serif;
-    background-color: #f8f3eb;
-    color: #594638;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #faf7f1;
+    color: #514237;
+}
+
+a {
+    text-decoration: none;
 }
 
 
-/* NAVBAR */
+/* =================================
+   BARRA DE NAVEGACIÓN
+================================= */
 
 .navbar {
     background-color: #655044;
-    padding: 18px;
+    padding: 20px 0;
 }
 
 .navbar-brand {
-    font-size: 24px;
-    color: #f5e9d8;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #f8eee1 !important;
 }
 
 .nav-link {
-    color: #f5e9d8 !important;
-    margin-left: 15px;
+    color: #f8eee1 !important;
+    margin-left: 25px;
+    font-size: 14px;
 }
 
 .nav-link:hover {
-    color: #d6ad8a !important;
+    color: #d9b99b !important;
+}
+
+.navbar-toggler {
+    border-color: #e8d5c0;
 }
 
 
-/* ENCABEZADO */
+/* =================================
+   ENCABEZADO
+================================= */
 
 .encabezado {
-    background-color: #e8d5c0;
-    padding: 80px 20px;
+    background-color: #eaddca;
+    padding: 110px 0;
 }
 
-.subtitulo {
+.etiqueta {
+    color: #a4775c;
+    font-size: 11px;
     letter-spacing: 4px;
-    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .encabezado h1 {
-    font-size: 55px;
-    color: #604637;
+    font-family: 'Playfair Display', serif;
+    font-size: 68px;
+    color: #594536;
+    margin-bottom: 15px;
 }
 
-.encabezado h2 {
-    font-size: 22px;
+.encabezado h1 em {
+    color: #a4775c;
     font-weight: normal;
 }
 
+.encabezado h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.texto-intro {
+    max-width: 450px;
+    line-height: 1.9;
+    color: #746052;
+    margin-bottom: 30px;
+}
+
 .foto {
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
+    width: 270px;
+    height: 330px;
     object-fit: cover;
-    margin: 25px;
-    border: 5px solid #f8f3eb;
-}
-
-.presentacion {
-    font-style: italic;
+    border-radius: 140px 140px 15px 15px;
+    border: 7px solid #f8f3eb;
 }
 
 
-/* TITULOS */
+/* =================================
+   BOTONES
+================================= */
 
-.titulo-seccion {
-    font-size: 35px;
-    color: #765744;
-    margin-bottom: 20px;
-}
-
-.descripcion {
-    margin-bottom: 35px;
-}
-
-
-/* PORTFOLIO */
-
-.tarjeta {
-    background-color: #eee3d5;
-    padding: 15px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.proyecto {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.tarjeta h3 {
-    margin-top: 15px;
-    font-size: 22px;
-}
-
-.tarjeta p {
-    font-size: 15px;
-}
-
-
-/* ACERCA DE MI */
-
-.acerca {
-    background-color: #e8d5c0;
-    padding: 70px 20px;
-}
-
-.acerca p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-
-/* CONTACTO */
-
-form {
-    max-width: 600px;
-    margin: auto;
-}
-
-.form-control {
-    padding: 12px;
-    border: 1px solid #c6a88e;
-    background-color: #fffdf9;
-}
-
-.boton {
-    background-color: #765744;
-    color: white;
-    padding: 12px 25px;
-}
-
-.boton:hover {
-    background-color: #594638;
-    color: white;
-}
-
-
-/* FOOTER */
-
-.footer {
-    background-color: #655044;
-    color: #f5e9d8;
-    padding: 35px;
-}
-
-.footer h3 {
-    font-size: 25px;
-}
-
-
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-
-    .encabezado h1 {
-        font-size: 38px;
-    }
-
-    .encabezado h2 {
-        font-size: 19px;
-    }
-
-    .titulo-seccion {
-        font-size: 28px;
-    }
-
-    .tarjeta {
-        margin-bottom: 25px;
-    }
-
-}
-
-/* PROYECTOS DE GITHUB */
-
-#repos-github {
-    margin-top: 30px;
-}
-
-#repos-github .tarjeta {
-    height: 100%;
-    min-height: 220px;
-    padding: 25px;
-    background-color: #eee3d5;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(80, 55, 35, 0.08);
-}
-
-#repos-github .tarjeta h3 {
-    color: #765744;
-    overflow-wrap: anywhere;
-}
-
-.boton-proyecto {
+.boton-principal {
     display: inline-block;
     background-color: #765744;
     color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    margin-top: 10px;
+    padding: 14px 27px;
+    border: none;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: 0.3s;
 }
 
-.boton-proyecto:hover {
-    background-color: #594638;
-    color: #f5e9d8;
+.boton-principal:hover {
+    background-color: #4f3c30;
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   PORTFOLIO
+================================= */
+
+.portfolio {
+    padding: 100px 0;
+    background-color: #faf7f1;
+}
+
+.titulo-seccion {
+    font-family: 'Playfair Display', serif;
+    font-size: 43px;
+    color: #594536;
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    color: #817164;
+    line-height: 1.8;
+    margin-bottom: 45px;
+}
+
+
+/* TARJETAS */
+
+.tarjeta-proyecto {
+    background-color: #f0e7dc;
+    padding: 32px 25px;
+    border-radius: 4px;
+    height: 100%;
+    min-height: 250px;
+    border-bottom: 3px solid #b38b6c;
+    transition: 0.3s;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(80, 55, 35, 0.10);
+}
+
+.numero-proyecto {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #a4775c;
+}
+
+.tarjeta-proyecto h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #594536;
+    margin: 20px 0 15px;
+    overflow-wrap: anywhere;
+}
+
+.tarjeta-proyecto p {
+    font-size: 14px;
+    color: #78685a;
+    line-height: 1.8;
+}
+
+.lenguaje {
+    display: block;
+    color: #a4775c;
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+.boton-proyecto,
+.boton-pagina {
+    display: inline-block;
+    font-size: 12px;
+    color: #765744;
+    border-bottom: 1px solid #b38b6c;
+    padding-bottom: 5px;
+    margin: 5px 14px 5px 0;
+    transition: 0.3s;
+}
+
+.boton-proyecto:hover,
+.boton-pagina:hover {
+    color: #a4775c;
+}
+
+.total-proyectos {
+    color: #a4775c;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+/* =================================
+   ACERCA DE MI
+================================= */
+
+.acerca {
+    background-color: #eaddca;
+    padding: 100px 0;
+}
+
+.acerca .titulo-seccion {
+    margin-bottom: 0;
+}
+
+.texto-acerca {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    line-height: 2;
+    color: #655044;
+}
+
+
+/* =================================
+   CONTACTO
+================================= */
+
+.contacto {
+    padding: 100px 0;
+    background-color: #faf7f1;
+}
+
+.contacto form {
+    max-width: 650px;
+    margin: auto;
+}
+
+.contacto label {
+    display: block;
+    margin: 20px 0 8px;
+    font-size: 13px;
+    color: #765744;
+}
+
+.form-control {
+    background-color: #fffdf9;
+    border: 1px solid #d9c8b7;
+    border-radius: 4px;
+    padding: 13px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.form-control:focus {
+    border-color: #a4775c;
+    box-shadow: 0 0 0 3px rgba(164, 119, 92, 0.12);
+}
+
+.contacto button {
+    margin-top: 25px;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+    background-color: #655044;
+    color: #f8eee1;
+    padding: 50px 0 25px;
+}
+
+.footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+
+.footer p {
+    font-size: 13px;
+    color: #e5d5c5;
+}
+
+.footer a {
+    color: #e5c6a7;
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+
+/* =================================
+   DISEÑO RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    .encabezado {
+        padding: 75px 20px;
+        text-align: center;
+    }
+
+    .encabezado h1 {
+        font-size: 45px;
+    }
+
+    .texto-intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .foto {
+        width: 220px;
+        height: 260px;
+        margin-top: 40px;
+    }
+
+    .portfolio,
+    .acerca,
+    .contacto {
+        padding: 65px 20px;
+    }
+
+    .titulo-seccion {
+        font-size: 34px;
+    }
+
+    .texto-acerca {
+        font-size: 18px;
+        margin-top: 25px;
+    }
+
+    .tarjeta-proyecto {
+        min-height: auto;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
 }
 
