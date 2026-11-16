@@ -181,3 +181,40 @@ form {
     }
 
 }
+
+/* PROYECTOS DE GITHUB */
+
+#repos-github {
+    margin-top: 30px;
+}
+
+#repos-github .tarjeta {
+    height: 100%;
+    min-height: 220px;
+    padding: 25px;
+    background-color: #eee3d5;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(80, 55, 35, 0.08);
+}
+
+#repos-github .tarjeta h3 {
+    color: #765744;
+    overflow-wrap: anywhere;
+}
+
+.boton-proyecto {
+    display: inline-block;
+    background-color: #765744;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.boton-proyecto:hover {
+    background-color: #594638;
+    color: #f5e9d8;
+}
+
