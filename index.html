@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
+<script>
 fetch("https://api.github.com/users/agiglio-sudo/repos?per_page=100&sort=updated")
     .then(response => response.json())
     .then(repos => {
@@ -23,40 +25,32 @@ fetch("https://api.github.com/users/agiglio-sudo/repos?per_page=100&sort=updated
 
         contenedor.innerHTML = "";
 
-        repos
-            .filter(repo => !repo.fork)
-            .forEach(repo => {
+        repos.filter(repo => !repo.fork).forEach(repo => {
 
-                const tarjeta = document.createElement("div");
+            const tarjeta = document.createElement("div");
+            tarjeta.className = "col-md-4 mb-4";
 
-                tarjeta.className = "col-md-4 mb-4";
+            tarjeta.innerHTML = `
+                <div class="tarjeta">
+                    <h3>${repo.name}</h3>
+                    <p>${repo.description || "Proyecto de programación"}</p>
+                    <p>${repo.language || "Programación"}</p>
+                    <a href="${repo.html_url}" target="_blank"
+                       class="boton-proyecto">
+                       Ver proyecto →
+                    </a>
+                </div>
+            `;
 
-                const descripcion = repo.description ||
-                    "Proyecto realizado durante mi aprendizaje.";
+            contenedor.appendChild(tarjeta);
+        });
 
-                tarjeta.innerHTML = `
-                    <div class="tarjeta">
-                        <h3>${repo.name}</h3>
-
-                        <p>${descripcion}</p>
-
-                        <p>Lenguaje: ${repo.language || "No especificado"}</p>
-
-                        <a href="${repo.html_url}"
-                           target="_blank"
-                           class="boton-proyecto">
-                           Ver proyecto
-                        </a>
-                    </div>
-                `;
-
-                contenedor.appendChild(tarjeta);
-            });
     })
     .catch(error => {
         document.getElementById("repos-github").innerHTML =
-            "<p>No se pudieron cargar los proyectos.</p>";
+        "<p>No se pudieron cargar los proyectos.</p>";
     });
+</script>
 
 <body>
 
